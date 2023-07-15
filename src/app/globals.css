@@ -3,9 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --clr-bg-dark: rgb(29, 32, 35); /* gray-800 */
+  --clr-bg-light: rgb(232, 232, 232); /* zinc-50 */
+
+  --clr-text-dark: #fafafa; /* gray-200 */
+  --clr-text-light: #1f2937; /* zinc-50 */
+}
+
+.dark {
+  background-color: var(--clr-bg-dark);
+  color: var(--clr-text-dark);
+}
+
+.dark .container {
+  background-color: #343a40;
+}
+
+.light .container {
+  background-color: #f8f9fa;
+}
+
+.light {
+  background-color: var(--clr-bg-light);
+  color: var(--clr-text-light);
 }
 
 @media (prefers-color-scheme: dark) {
